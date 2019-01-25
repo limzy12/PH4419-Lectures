@@ -2,6 +2,7 @@
 
 from scipy import *
 import numpy as np
+import matplotlib.pyplot as plt
 
 from scipy import integrate
 
@@ -18,8 +19,18 @@ def cv(T):
     uppLimit = debyeT / T
 
     integral = integrate.quad(integrand, 0., uppLimit)
-    coeff = 9 * vol * rho / (uppLimit ** 3)
+    coeff = 9 * vol * rho * K_B / (uppLimit ** 3)
 
     return coeff * integral[0]
 
-print(cv(300))
+def plotCv(lowerT, upperT, numPts):
+    T = linspace(lowerT, upperT, numPts)
+    Cv = np.zeros(len(T))
+    
+    for i in range(len(T)):
+        Cv[i] = cv(T[i])
+    
+    plt.plot(T, Cv)
+    plt.show()
+
+plotCv(5,500, 100)
