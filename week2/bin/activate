@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/LimZY/Dropbox/University Stuff/Y3S2/PH4419 Computational Physics/src/week2"
+VIRTUAL_ENV="/Users/LimZY/Dropbox/University Stuff/Y3S2/PH4419 Computational Physics/Lectures/week2"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
