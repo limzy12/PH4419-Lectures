@@ -2,9 +2,7 @@
 from scipy import *
 import matplotlib.pyplot as plt
 
-
 from scipy.integrate import ode
-
 
 ## Define the system of DEs; the first argument is the integrating variable.
 def diffeq(t, y, mu): 
@@ -34,7 +32,6 @@ def vanderpol_plot(x0, v0, t1 = 50., nt = 2000, mu = 10., solver = 'dopri5'):
     ymax, ymin = min(y[:, 0]) - 0.2, max(y[:, 0]) + 0.2
     plt.xlim(xmin, xmax)
     plt.ylim(ymin, ymax)
-
     plt.show()
     
 
@@ -45,4 +42,4 @@ def vanderpol_plot(x0, v0, t1 = 50., nt = 2000, mu = 10., solver = 'dopri5'):
 # vanderpol_plot(0.1, 0., 3000., 2000, 1000.)
 # vanderpol_plot(0.1, 0., 3000., 20000, 1000.)
 # vanderpol_plot(0.1, 0., 3000., 20000, 1000., 'lsoda')
-vanderpol_plot(0.1, 0., 3000., 2000, 1000., 'lsoda')
+# vanderpol_plot(0.1, 0., 3000., 2000, 1000., 'lsoda')
